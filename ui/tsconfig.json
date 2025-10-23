@@ -21,7 +21,12 @@
       "@types": ["../src/_types.ts"]
     }
   },
-  "include": ["src", "../src/_helpers", "../src/_types.ts"],
+  "include": ["src"],
+  "exclude": [
+    "node_modules",
+    "../src/_helpers/exportJsonToSheet.ts",
+    "../src/_helpers/readExcelRows.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
 

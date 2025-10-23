@@ -14,5 +14,10 @@ export default defineConfig({
       '@types': path.resolve(__dirname, '../src/_types.ts'),
     },
   },
+  build: {
+    commonjsOptions: {
+      include: [/node_modules/, /src\/_helpers/],
+    },
+  },
 })
 
