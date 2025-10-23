@@ -4,6 +4,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
+  base: '/cavali-migrate/',
   server: {
     port: 3000,
   },
