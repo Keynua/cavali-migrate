@@ -1,0 +1,40 @@
+{
+	"name": "migrante-cavali-script",
+	"version": "1.0.0",
+	"description": "",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "tsc",
+		"start": "npm run build && node dist/index.js",
+		"dev": "ts-node src/index.ts",
+		"dev-script": "node -r dotenv/config dist/index.js dotenv_config_path=.env.dev",
+		"stg-script": "node -r dotenv/config dist/index.js dotenv_config_path=.env.stg",
+		"prod-script": "node -r dotenv/config dist/index.js dotenv_config_path=.env.prod",
+		"dev-script:ts": "ts-node -r dotenv/config src/index.ts dotenv_config_path=.env.dev",
+		"stg-script:ts": "ts-node -r dotenv/config src/index.ts dotenv_config_path=.env.stg",
+		"prod-script:ts": "ts-node -r dotenv/config src/index.ts dotenv_config_path=.env.prod",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"test:ui": "vitest --ui",
+		"test:coverage": "vitest run --coverage"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"date-fns": "^2.29.3",
+		"dotenv": "^17.2.3",
+		"file-saver": "^2.0.5",
+		"lodash": "^4.17.21",
+		"read-excel-file": "^5.5.3",
+		"xlsx": "^0.18.5"
+	},
+	"devDependencies": {
+		"@types/lodash": "^4.17.20",
+		"@types/node": "^20.19.19",
+		"@vitest/coverage-v8": "^3.2.4",
+		"@vitest/ui": "^3.2.4",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.9.3",
+		"vitest": "^3.2.4"
+	}
+}
